@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="header.js"></script>
+    <script src="https://unpkg.com/react/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom/umd/react-dom.development.js"></script>
+    <title>Bengali Student Organization</title>
+    <link rel="icon" type="image/x-icon" href="/images/logo.jpeg">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+</head>
+<body>
+
+
+<!--------Header-------------->
+
+<header-container></header-container>
+
+<!--------BSO Title Section-------------->
+<section class="intro-title index" id="intro-title">
+    <div class="text-box">
+        <h1>Bengali Student Organization</h1>
+        <p>Showcasing Bengali culture at the University of Virginia</p>
+    </div>
+    
+</section>
+
+<!--------JOIN SECTION-------------->
+
+<section class="join">
+    <i class="fa fa-handshake-o fa-2x"></i>
+    <br>
+    <h1>Join</h1>
+    <p>Want access to enriching social and cultural events? Get involved in our community!</p>
+    <br>
+    <a href="https://atuva.student.virginia.edu/organization/bso" class="join-btn">Become a member</a>
+    <br>
+    <br>
+
+</section>
+
+<!--------MISSION SECTION-------------->
+
+<section class="mission" id="mission">
+    <h1>Our Mission</h1>
+    <p>The Bengali Student Organization is a student-run 
+        organization that serves to educate and bring together members of the 
+        University community who are interested in and/or directly affiliated 
+        with the culture and experiences of Bengal, a region encompassing both the 
+        People’s Republic of Bangladesh and the Indian state of West Bengal. 
+        BSO also serves to bring attention to issues that affect the Bengal 
+        region including but not limited to: poverty, economic instability, 
+        human rights, environmental concerns, inequality, racial and religious strife, 
+        and the Rohingya refugee crisis. We aim to be an inclusive organization with our goal to teach others the Bengali culture/language!</p>
+
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="images/bag.jpeg"></div>
+                <div class="swiper-slide"><img src="images/gbm1.jpeg"></div>        
+                <div class="swiper-slide"><img src="images/dancehands.jpeg"></div>            
+                <div class="swiper-slide"><img src="images/tugofwar.jpeg"></div>            
+                <div class="swiper-slide"><img src="images/hands.jpeg"></div>            
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+</section>
+
+<!--------FIND US-------------->
+
+<footer>
+    <section class="findus">
+        <h1>Find Us Here</h1>
+        <br>
+        <a href="https://www.instagram.com/bsoatuva/"><i class="fa fa-instagram fa-3x"></i></a>
+        <a href="https://www.facebook.com/BSOatUVA/"><i class="fa fa-facebook fa-3x"></i></a><br>
+        <hr class="gray-line">
+        <div class="nonaff">
+            <p>Although this organization has members who are University of Virginia students and may have University employees associated or engaged in its activities and affairs, the organization is not a part of or an agency of the University. It is a separate and independent organization which is responsible for and manages its own activities and affairs. The University does not direct, supervise or control the organization and is not responsible for the organization′s contracts, acts or omissions.</p>
+        </div>
+        <div class="copyright">
+            <p>Copyright &copy; 2023 All rights reserved</p>
+        </div>
+    </section>
+</footer>
+  
+
+<!--------IMAGE SLIDESHOW-------------->
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+<script>
+    const swiper = new Swiper('.swiper', {
+        autoplay: {
+            delay: 2000,
+            disableOnInteraction: false,
+        },
+  // Optional parameters
+  loop: true,
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+    clickable:true,
+  },
+});
+</script>
+
+
+</body>
+</html>

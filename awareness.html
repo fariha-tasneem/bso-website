@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="header.js"></script>
+    <title>Awareness</title>
+    <link rel="icon" type="image/x-icon" href="/images/logo.jpeg">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+</head>
+<body>
+    <!--------Header-------------->
+    <header-container></header-container>
+
+    <!--------EVENTS Heading-------------->
+    <section class="awareness-title">
+        <div class="text-box">
+            <h1>Awareness</h1>
+            <p>Learn about some important events/issues in the Bengal region</p>
+        </div>
+        
+    </section>
+
+    <section class="event1">
+        <div class="awareness-container">
+            <div class="awareness-img">
+                <img src="images/independence.jpeg" width="400" height="400" class="center">
+            </div>
+            <div class="awareness-text">
+                <h1>Bangladesh Independence Day</h1>
+                <p>
+                    Independence of Bangladesh was declared on 26 March 1971, celebrated as Independence Day, from Pakistan. The Independence Day of Bangladesh is celebrated on 26 March when Sheikh Mujibur Rahman declared the Independence of Bangladesh.
+                </p>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="event2">
+        <div class="awareness-container">
+            <div class="awareness-img">
+                <img src="images/language1.jpeg" width="400" height="400" class="center">
+                
+            </div>
+            <!-- <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="images/language1.jpeg" width="400" height="400" class="center"></div>
+                    <div class="swiper-slide"><img src="images/language2.jpeg" width="400" height="400" class="center"></div>        
+                    <div class="swiper-slide"><img src="images/language3.jpeg" width="400" height="400" class="center"></div>     
+                </div>       
+            </div>
+                <div class="swiper-pagination"></div>
+            </div> -->
+            <div class="awareness-text">
+                <h1>International Mother Language Day</h1>
+                <p>In Bangladesh, February 21st (Ekushey February) is observed as the anniversary of the Language Movement when Bangladeshis fought to preserve the Bengali language against the West Pakistani government - making Bangladesh the first nation to fight for its right to speak its own language. In 1999, UNESCO officially announced February 21st as International Mother Language Day and it has since been adopted to promote and preserve all languages!</p>
+            </div>
+        </div>
+
+    </section>
+
+
+<!--------IMAGE SLIDESHOW-------------->
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+<script>
+    const swiper = new Swiper('.swiper', {
+        autoplay: {
+            delay: 2000,
+            disableOnInteraction: false,
+        },
+  // Optional parameters
+  loop: true,
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+    clickable:true,
+  },
+});
+</script>
+
+
+<footer>
+    <section class="findus">
+        <h1>Find Us Here</h1>
+        <br>
+        <a href="https://www.instagram.com/bsoatuva/"><i class="fa fa-instagram fa-3x"></i></a>
+        <a href="https://www.facebook.com/BSOatUVA/"><i class="fa fa-facebook fa-3x"></i></a><br>
+        <hr class="gray-line">
+        <div class="nonaff">
+            <p>Although this organization has members who are University of Virginia students and may have University employees associated or engaged in its activities and affairs, the organization is not a part of or an agency of the University. It is a separate and independent organization which is responsible for and manages its own activities and affairs. The University does not direct, supervise or control the organization and is not responsible for the organization′s contracts, acts or omissions.</p>
+        </div>
+        <div class="copyright">
+            <p>Copyright &copy; 2023 All rights reserved</p>
+        </div>
+    </section>
+</footer>
+
+</body>
+</html>

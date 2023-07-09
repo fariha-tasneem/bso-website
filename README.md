@@ -1,6 +1,6 @@
 # bso-website
 
-bsoatuva.com is an online platform designed to serve and connect the members and supporters of the Bengali Student Organization. The website aims to provide information, resources, and updates about our organization's activities, events, and initiatives.
+[bsoatuva.com](bsoatuva.com) is an online platform designed to serve and connect the members and supporters of the Bengali Student Organization. The website aims to provide information, resources, and updates about our organization's activities, events, and initiatives.
 
 Key Features:
 

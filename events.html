@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X -UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="header.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Events</title>
+    <link rel="icon" type="image/x-icon" href="/images/logo.jpeg">
+
+</head>
+<body>
+
+<!--------Header-------------->
+<header-container></header-container>
+
+<!--------EVENTS Heading-------------->
+<section class="events-title" id="events-title">
+    <div class="text-box">
+        <h1>Events</h1>
+    </div>
+    
+</section>
+
+
+<section class="gallery">
+    <h2>Gallery</h1>
+    <p>Click image for slideshow enlarged view</p>
+    <div class="imgs">
+      <div class="img-wrapper">
+        <img src="images/bash/img1.png" width="300" height="200" class="center" onclick="openModal(0)">
+      </div>
+      <div class="img-wrapper">
+        <img src="images/bash/img2.png" width="300" height="200" class="center" onclick="openModal(1)">
+      </div>
+      <div class="img-wrapper">
+        <img src="images/bash/img3.png" width="300" height="200" class="center" onclick="openModal(2)">
+      </div>
+      <div class="img-wrapper">
+        <img src="images/bash/img4.png" width="300" height="200" class="center" onclick="openModal(3)">
+      </div>
+      <div class="img-wrapper">
+        <img src="images/bash/img5.png" width="300" height="200" class="center" onclick="openModal(4)">
+      </div>
+      <div class="img-wrapper">
+        <img src="images/fallmela2022/img6.png" width="300" height="200" class="center" onclick="openModal(5)">
+      </div>
+      <div class="img-wrapper">
+        <img src="images/fallmela2022/img2.png" width="300" height="200" class="center" onclick="openModal(6)">
+      </div>
+      <div class="img-wrapper">
+        <img src="images/fallmela2022/img3.png" width="300" height="200" class="center" onclick="openModal(7)">
+      </div>
+      <div class="img-wrapper">
+        <img src="images/fallmela2022/img4.png" width="300" height="200" class="center" onclick="openModal(8)">
+      </div>
+      <div class="img-wrapper">
+        <img src="images/fallmela2022/img5.png" width="300" height="200" class="center" onclick="openModal(9)">
+      </div>
+      <div class="img-wrapper">
+        <img src="images/misc/img1.jpeg" width="300" height="200" class="center" onclick="openModal(10)">
+      </div>
+      <div class="img-wrapper">
+        <img src="images/misc/img2.jpeg" width="300" height="200" class="center" onclick="openModal(11)">
+      </div>
+      <div class="img-wrapper">
+        <img src="images/misc/img3.jpeg" width="300" height="200" class="center" onclick="openModal(12)">
+      </div>
+      <div class="img-wrapper">
+        <img src="images/misc/img4.jpeg" width="300" height="200" class="center" onclick="openModal(13)">
+      </div>
+      <div class="img-wrapper">
+        <img src="images/misc/img5.jpeg" width="300" height="200" class="center" onclick="openModal(14)">
+      </div>
+      <div class="img-wrapper">
+        <img src="images/desi-dance-img1.png" width="300" height="200" class="center" onclick="openModal(15)">
+      </div>
+      <div class="img-wrapper">
+        <img src="images/misc/img6.jpeg" width="300" height="200" class="center" onclick="openModal(16)">
+      </div>
+      <div class="img-wrapper">
+        <img src="images/misc/img7.jpeg" width="300" height="200" class="center" onclick="openModal(17)">
+      </div>
+      <div class="img-wrapper">
+        <img src="images/desi-dance-img2.png" width="300" height="200" class="center" onclick="openModal(18)">
+      </div>
+    </div>
+</section>
+  
+<div id="myModal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <div class="modal-content">
+      <img id="modalImage" src="">
+      <a class="prev" onclick="changeImage(-1)"><i class="fas fa-chevron-left"></i></a>
+      <a class="next" onclick="changeImage(1)"><i class="fas fa-chevron-right"></i></a>
+    </div>
+</div>
+  
+  
+    <script>
+      var images = [
+        "images/bash/img1.png",
+        "images/bash/img2.png",
+        "images/bash/img3.png",
+        "images/bash/img4.png",
+        "images/bash/img5.png",
+        "images/fallmela2022/img6.png",
+        "images/fallmela2022/img2.png",
+        "images/fallmela2022/img3.png",
+        "images/fallmela2022/img4.png",
+        "images/fallmela2022/img5.png",
+        "images/misc/img1.jpeg",
+        "images/misc/img2.jpeg",
+        "images/misc/img3.jpeg",
+        "images/misc/img4.jpeg",
+        "images/misc/img5.jpeg",
+        "images/desi-dance-img1.png",
+        "images/misc/img6.jpeg",
+        "images/misc/img7.jpeg",
+        "images/desi-dance-img2.png",
+
+        ];
+
+        var setSizes = [5, 5, 7]; // Number of images in each set
+        var setStartIndex = [0, 5, 10]; // Starting index of each set
+
+        function openModal(index) {
+        var setIndex;
+        var imageIndex;
+        
+        for (var i = 0; i < setSizes.length; i++) {
+            if (index < setStartIndex[i] + setSizes[i]) {
+            setIndex = i;
+            imageIndex = index - setStartIndex[i];
+            break;
+            }
+        }
+
+        currentIndex = setStartIndex[setIndex] + imageIndex;
+        document.getElementById("modalImage").src = images[currentIndex];
+        document.getElementById("myModal").style.display = "block";
+        }
+
+
+
+
+        function closeModal() {
+        document.getElementById("myModal").style.display = "none";
+        }
+
+        function changeImage(n) {
+        currentIndex += n;
+        if (currentIndex < 0) {
+            currentIndex = images.length - 1;
+        } else if (currentIndex >= images.length) {
+            currentIndex = 0;
+        }
+        document.getElementById("modalImage").src = images[currentIndex];
+        }
+
+        document.addEventListener('keydown', handleKeyDown);
+
+        function handleKeyDown(event) {
+            if (event.key === 'ArrowLeft') {
+            changeImage(-1); // Navigate to previous slide
+            } else if (event.key === 'ArrowRight') {
+            changeImage(1); // Navigate to next slide
+            }
+        }
+    </script>
+
+<br>
+<br>
+
+
+<section class="pastevents gallery">
+    <h2>Past Events</h2>
+    <p>Click on flyer for link to photos</p>
+    <div class="flyers">
+        <div class="img-container">
+            <a href="https://www.facebook.com/media/set/?set=a.648872240573813&type=3">
+                <img src="images/charity-bash.jpeg">
+            </a>
+        </div>
+        <div class="img-container">
+            <a href="https://www.facebook.com/media/set/?set=a.516020120244077&type=3">
+                <img src="images/desi-dance.jpeg">
+            </a>
+        </div>
+        <div class="img-container">
+            <a href="https://www.instagram.com/p/CWRDvaMrXnM/?igshid=MzRlODBiNWFlZA==">
+                <img src="images/fuska-comp.jpeg">
+            </a>
+        </div>
+        <div class="img-container">
+            <a href="https://www.facebook.com/media/set/?set=a.515989383580484&type=3">
+                <img src="images/mela-flyer.jpeg">
+            </a>
+        </div>
+        <div class="img-container">
+            <a href="https://www.facebook.com/media/set/?set=a.515985960247493&type=3">
+                <img src="images/gbm2021.jpeg">
+            </a>
+        </div>
+    </div>
+</section>
+
+
+<footer>
+  <section class="findus">
+      <h1>Find Us Here</h1>
+      <br>
+      <a href="https://www.instagram.com/bsoatuva/"><i class="fa fa-instagram fa-3x"></i></a>
+      <a href="https://www.facebook.com/BSOatUVA/"><i class="fa fa-facebook fa-3x"></i></a><br>
+      <hr class="gray-line">
+      <div class="nonaff">
+          <p>Although this organization has members who are University of Virginia students and may have University employees associated or engaged in its activities and affairs, the organization is not a part of or an agency of the University. It is a separate and independent organization which is responsible for and manages its own activities and affairs. The University does not direct, supervise or control the organization and is not responsible for the organization′s contracts, acts or omissions.</p>
+      </div>
+      <div class="copyright">
+          <p>Copyright &copy; 2023 All rights reserved</p>
+      </div>
+  </section>
+</footer>
+
+</body>
+</html>

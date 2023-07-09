@@ -1,6 +1,6 @@
 # bso-website
 
-This Website is an online platform designed to serve and connect the members and supporters of the Bengali Student Organization. This website aims to provide information, resources, and updates about our organization's activities, events, and initiatives.
+This Website is an online platform designed to serve and connect the members and supporters of the Bengali Student Organization. It aims to provide information, resources, and updates about our organization's activities, events, and initiatives.
 
 Key Features:
 
